@@ -7,6 +7,6 @@ from .models import Product
 class ProductView(TemplateView):
     template_name = "product.html"
     def get_context_data(self, **kwargs):
-        prds_obj=Product.objecta.all()
+        prds_obj=Product.objects.all()
         context = {'product':prds_obj}
         return context
